@@ -136,7 +136,7 @@ body.dark .moon {
 <header>
     <h1>Hayyy Pengunjung </h1>
     <h1>Welcome to Website "Facha" </h1>
-    <h1>Ini hanya awal, kedepannya akan lebih banyak isi dari web ini </h1>
+    <h1>Ini hanya awal, kedepannya akan lebih banyak isi dari web ini <3 </h1>
     <button class="toggle-dark" onclick="toggleDark()">
     <svg id="themeIcon" width="26" height="26" viewBox="0 0 24 24" fill="none">
         <!-- Sun -->
@@ -158,13 +158,9 @@ body.dark .moon {
         <img src="https://i.imgur.com/oEoS52L.jpg">
     </div>
 
-    <div class="comment-box">
-        <h2>Komentar Pengunjung</h2>
-        <input type="text" id="nama" placeholder="Nama Anda">
-        <textarea id="pesan" rows="4" placeholder="Tulis komentar..."></textarea>
-        <button onclick="kirimKomentar()">Kirim</button>
+</div>
 
-        <div class="comment-list" id="commentList"></div>
+        
     </div>
 
 </div>
@@ -179,26 +175,6 @@ if (localStorage.getItem("darkmode") === "true") {
     document.body.classList.add("dark");
 }
 
-function kirimKomentar() {
-    const nama = document.getElementById("nama").value.trim();
-    const pesan = document.getElementById("pesan").value.trim();
-
-    if (!nama || !pesan) {
-        alert("Isi nama dan komentar!");
-        return;
-    }
-
-    const list = document.getElementById("commentList");
-
-    const div = document.createElement("div");
-    div.className = "comment";
-    div.innerHTML = `<strong>${nama}</strong><br>${pesan}`;
-
-    list.prepend(div);
-
-    document.getElementById("nama").value = "";
-    document.getElementById("pesan").value = "";
-}
 </script>
 
 </body>
